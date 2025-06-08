@@ -1,2 +1,125 @@
-# prova_n2
-Projeto com React + NodeJS com Docker valido como nota de prova para a N2
+# 🧪 Prova N2 - Aplicação com Rotas e Consumo de API via Docker
+
+Este projeto é uma aplicação fullstack construída com **ReactJS + MUI** no frontend e **Express (Node.js)** no backend. A comunicação é feita via uma **API containerizada com Docker**.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- ReactJS (Vite)
+- Material UI (MUI)
+- Node.js com Express
+- Docker
+- React Router DOM
+- Axios
+
+---
+
+## 📁 Estrutura de Pastas
+
+```
+prova_n2/
+├── backend/        # API Express containerizada
+├── frontend/       # Aplicação React com MUI
+├── docker-compose.yml
+```
+
+---
+
+## 🔧 Como Rodar o Backend Localmente (Sem Docker)
+
+### 1. Acesse a pasta do backend:
+
+```bash
+cd C:\Unidep\2025\prova_n2\backend
+```
+
+### 2. Instale as dependências (irá criar a pasta `node_modules`):
+
+```bash
+npm install --force
+```
+
+### 3. Inicie o servidor:
+
+```bash
+npm start
+```
+
+### 4. Acesse as rotas no navegador:
+
+- Lista de usuários:
+  ```
+  http://localhost:3001/usuarios
+  ```
+
+- Detalhes de um usuário específico:
+  ```
+  http://localhost:3001/usuarios/1
+  ```
+
+---
+
+## 🐳 Como Rodar com Docker
+
+### 1. Na raiz do projeto, crie a imagem e rode o container:
+
+```bash
+cd backend
+docker build -t backend-api .
+docker run -d -p 3001:3001 --name backend-container backend-api
+```
+
+### 2. Acesse via navegador nas mesmas rotas:
+
+- http://localhost:3001/usuarios  
+- http://localhost:3001/usuarios/1
+
+---
+
+## 🌐 Frontend React (Rodar Separado)
+
+### 1. Acesse a pasta `frontend/`
+
+```bash
+cd frontend
+```
+
+### 2. Instale as dependências:
+
+```bash
+npm install
+```
+
+### 3. Rode a aplicação:
+
+```bash
+npm run dev
+```
+
+### 4. Acesse no navegador:
+
+```
+http://localhost:5173/usuarios
+```
+
+---
+
+## ✅ Funcionalidades
+
+- Rota `/usuarios`: lista usuários mockados vindos do backend.
+- Rota `/dados/:id`: exibe detalhes do usuário ao clicar.
+- API containerizada com Docker.
+- Navegação por rotas utilizando React Router.
+
+---
+
+## 📝 Commits com Conventional Commits
+
+Este projeto utiliza a convenção de commits `feat`, `fix`, `docs`, `refactor`, entre outros, para melhor organização e rastreamento de mudanças no repositório.
+
+---
+
+## 👩‍💻 Desenvolvido por
+
+[Kauany Bertelli](https://github.com/kauanybertelli)
