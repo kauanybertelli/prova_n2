@@ -88,16 +88,20 @@ cd frontend
 ### 2. Instale as dependências:
 
 ```bash
-npm install
+npm install --force
 ```
 
-### 3. Rode a aplicação:
+### 3. Depois installe as dependências do react e componentes: 
+```bash
+npm install react-router-dom axios @mui/material @emotion/react @emotion/styled
+```
 
+### 4. Rode a aplicação:
 ```bash
 npm run dev
 ```
 
-### 4. Acesse no navegador:
+### 5. Acesse no navegador:
 
 ```
 http://localhost:5173/usuarios
