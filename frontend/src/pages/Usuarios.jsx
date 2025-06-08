@@ -41,8 +41,10 @@ function Usuarios() {
             transition: '0.3s',
             '&:hover': { boxShadow: 3 }
           }}
+          /* A cada clique abra uma nova guia no navegador com id do usuário selecionado. */
           onClick={() => window.open(`/dados/${user.id}`, '_blank')}
         >
+          {/* Lista de item que aparece na tela com os usuários. */}
           <CardContent>
             <ListItem>
               <ListItemText primary={user.nome} secondary={user.email} />
