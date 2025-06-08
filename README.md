@@ -34,7 +34,7 @@ prova_n2/
 cd C:\Unidep\2025\prova_n2\backend
 ```
 
-### 2. Instale as dependências (irá criar a pasta `node_modules`):
+### 2. Instale as dependências (irá criar a pasta `node_modules`) (somente ainda não foi instalado):
 
 ```bash
 npm install --force
@@ -64,9 +64,28 @@ npm start
 
 ### 1. Na raiz do projeto, crie a imagem e rode o container:
 
+### 1.1. Acessar a pasta backend.
 ```bash
 cd backend
+```
+
+### 1.2. Autenticar-se no Docker (com o docker rodando)
+```bash
+docker login -u kaubertelli
+```
+
+### 1.3. Passar a senha
+```bash
+kaubertelli
+```
+
+### 1.4. Criar a imagem do backend
+```bash
 docker build -t backend-api .
+```
+
+### 1.5. Rodar a imagem
+```bash
 docker run -d -p 3001:3001 --name backend-container backend-api
 ```
 
@@ -85,13 +104,13 @@ docker run -d -p 3001:3001 --name backend-container backend-api
 cd frontend
 ```
 
-### 2. Instale as dependências:
+### 2. Instale as dependências (somente ainda não foi instalado):
 
 ```bash
 npm install --force
 ```
 
-### 3. Depois installe as dependências do react e componentes: 
+### 3. Depois installe as dependências do react e componentes (somente ainda não foi instalado): 
 ```bash
 npm install react-router-dom axios @mui/material @emotion/react @emotion/styled
 ```
