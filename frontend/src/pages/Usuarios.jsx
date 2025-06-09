@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+// Componentes estão sendo importados do '@mui/material';
 import {
   Box,
   Typography,

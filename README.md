@@ -19,8 +19,8 @@ Este projeto é uma aplicação fullstack construída com **ReactJS + MUI** no f
 
 ```
 prova_n2/
-├── backend/        # API Express containerizada
-├── frontend/       # Aplicação React com MUI
+├── backend/        # API Express containerizada com Dockerfile.
+├── frontend/       # Aplicação React com MUI - '@mui/material'
 ├── docker-compose.yml
 ```
 
